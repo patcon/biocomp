@@ -1,0 +1,3 @@
+<?php
+
+include_once('school_feed_test.features.inc');
