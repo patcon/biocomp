@@ -22,7 +22,7 @@ function school_feed_test_feeds_importer_default() {
       'plugin_key' => 'FeedsCSVParser',
       'config' => array(
         'delimiter' => 'TAB',
-        'headers' => 0,
+        'no_headers' => 1,
       ),
     ),
     'processor' => array(
@@ -31,6 +31,7 @@ function school_feed_test_feeds_importer_default() {
         'update_existing' => 1,
         'expire' => '-1',
         'mappings' => array(),
+        'delete_with_source' => FALSE,
       ),
     ),
     'content_type' => 'competition',
