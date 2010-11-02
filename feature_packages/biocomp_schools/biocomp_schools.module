@@ -1,0 +1,3 @@
+<?php
+
+include_once('biocomp_schools.features.inc');
