@@ -66,6 +66,7 @@ projects[vt_default][patch][] = "http://drupal.org/files/issues/960758_unset-def
 ; FEATURES
 
 projects[biocomp][type] = module
+projects[biocomp][directory_name] = features_custom
 projects[biocomp][download][type] = git
 projects[biocomp][download][url] = git://github.com/patcon/biocomp.git
 
