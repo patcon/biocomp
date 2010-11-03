@@ -85,6 +85,28 @@ function biocomp_schools_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'content_access_settings';
+  $strongarm->value = array(
+    'view' => array(
+      'school' => array(),
+    ),
+    'view_own' => array(
+      'school' => array(
+        0 => 6,
+      ),
+    ),
+    'per_node' => array(
+      'school' => 0,
+    ),
+    'priority' => array(
+      'school' => '0',
+    ),
+  );
+
+  $export['content_access_settings'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'content_extra_weights_school';
   $strongarm->value = array(
     'title' => '-5',

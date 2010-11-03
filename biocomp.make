@@ -54,6 +54,14 @@ projects[location][version] = "3.1"
 projects[schema][subdir] = "contrib"
 projects[schema][version] = "1.7"
 
+projects[vertical_tabs][subdir] = "contrib"
+projects[vertical_tabs][version] = "6.x-1.0-rc1"
+
+projects[vt_default][subdir] = "contrib-modified"
+projects[vt_default][version] = "6.x-1.0-rc3"
+projects[vt_default][patch][] = "http://drupal.org/files/issues/844930_move-tab-and-fix-package-in-info.patch"
+projects[vt_default][patch][] = "http://drupal.org/files/issues/960758_unset-default-tab-when-empty.patch"
+
 ; jQuery UI
 libraries[jquery_ui][download][type] = "get"
 libraries[jquery_ui][download][url] = "http://jquery-ui.googlecode.com/files/jquery.ui-1.6.zip"
