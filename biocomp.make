@@ -15,13 +15,12 @@ projects[content_profile][version] = "1.0"
 projects[ctools][subdir] = "contrib"
 projects[ctools][version] = "1.7"
 
-projects[data][subdir] = "contrib-modified"
+projects[data][subdir] = "contrib_modified"
 projects[data][version] = "1.0-alpha14"
 ; Allow for any core filter to be selected: http://drupal.org/node/948426
 projects[data][patch][] = "http://drupal.org/files/issues/select_any_core_handler_0.patch"
 
 projects[date][subdir] = "contrib"
-projects[date][subdir] = "date"
 projects[date][version] = "2.6"
 
 projects[diff][subdir] = "contrib"
@@ -42,7 +41,7 @@ projects[filefield][version] = "3.7"
 projects[install_profile_api][subdir] = "contrib"
 projects[install_profile_api][version] = "2.1"
 
-projects[jquery_ui][subdir] = "contrib-modified"
+projects[jquery_ui][subdir] = "contrib_modified"
 projects[jquery_ui][version] = "1.4"
 ; Allow jQuery UI module to find library in libraries dir: http://drupal.org/node/489140
 projects[jquery_ui][patch][] = "http://drupal.org/files/issues/jquery_ui_489140_37.patch"
@@ -59,13 +58,20 @@ projects[schema][version] = "1.7"
 projects[vertical_tabs][subdir] = "contrib"
 projects[vertical_tabs][version] = "1.0-rc1"
 
-projects[vt_default][subdir] = "contrib-modified"
+projects[vt_default][subdir] = "contrib_modified"
 projects[vt_default][version] = "1.0-rc3"
 projects[vt_default][patch][] = "http://drupal.org/files/issues/844930_move-tab-and-fix-package-in-info.patch"
 projects[vt_default][patch][] = "http://drupal.org/files/issues/960758_unset-default-tab-when-empty.patch"
+
+; FEATURES
+
+projects[biocomp][type] = module
+projects[biocomp][download][type] = git
+projects[biocomp][download][url] = git://github.com/patcon/biocomp.git
+
+; LIBRARIES
 
 ; jQuery UI
 libraries[jquery_ui][download][type] = "get"
 libraries[jquery_ui][download][url] = "http://jquery-ui.googlecode.com/files/jquery.ui-1.6.zip"
 libraries[jquery_ui][directory_name] = "jquery.ui"
-libraries[jquery_ui][destination] = "libraries"
