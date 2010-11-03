@@ -3,7 +3,7 @@
 /**
  * Implementation of hook_fieldgroup_default_groups().
  */
-function competition_data_test_fieldgroup_default_groups() {
+function biocomp_comp_data_fieldgroup_default_groups() {
   $groups = array();
 
   // Exported group: group_comp_data

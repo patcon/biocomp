@@ -1,0 +1,3 @@
+<?php
+
+include_once('biocomp_comp_data.features.inc');

@@ -3,7 +3,7 @@
 /**
  * Implementation of hook_content_default_fields().
  */
-function competition_data_test_content_default_fields() {
+function biocomp_comp_data_content_default_fields() {
   $fields = array();
 
   // Exported field: field_comp_contestants_eligible
