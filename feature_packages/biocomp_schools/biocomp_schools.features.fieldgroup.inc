@@ -82,9 +82,10 @@ function biocomp_schools_fieldgroup_default_groups() {
     'weight' => '-3',
     'fields' => array(
       '0' => 'field_schoolname',
-      '1' => 'field_address',
-      '2' => 'field_phone',
-      '3' => 'field_fax',
+      '1' => 'field_school_code',
+      '2' => 'field_address',
+      '3' => 'field_phone',
+      '4' => 'field_fax',
     ),
   );
 
@@ -121,10 +122,7 @@ function biocomp_schools_fieldgroup_default_groups() {
       ),
     ),
     'weight' => '0',
-    'fields' => array(
-      '0' => 'field_name_alt_check',
-      '1' => 'field_name_alt',
-    ),
+    'fields' => array(),
   );
 
   // Exported group: group_student_name
@@ -160,10 +158,7 @@ function biocomp_schools_fieldgroup_default_groups() {
       ),
     ),
     'weight' => '-1',
-    'fields' => array(
-      '0' => 'field_name_first',
-      '1' => 'field_name_last',
-    ),
+    'fields' => array(),
   );
 
   // Translatables
