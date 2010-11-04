@@ -1,4 +1,6 @@
 core = "6.x"
+dependencies[] = "biocomp_comp_data"
+dependencies[] = "biocomp_schools"
 dependencies[] = "data"
 dependencies[] = "features"
 dependencies[] = "feeds_tamper"
