@@ -3,7 +3,7 @@
 /**
  * Implementation of hook_content_default_fields().
  */
-function school_feed_test_content_default_fields() {
+function biocomp_school_result_importer_content_default_fields() {
   $fields = array();
 
   // Exported field: field_comp_contestants_eligible

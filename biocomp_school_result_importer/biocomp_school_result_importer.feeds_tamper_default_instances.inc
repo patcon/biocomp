@@ -3,7 +3,7 @@
 /**
  * Implementation of hook_feeds_tamper_default_instances().
  */
-function school_feed_test_feeds_tamper_default_instances() {
+function biocomp_school_result_importer_feeds_tamper_default_instances() {
   $export = array();
   $tamper_instance = new stdClass;
   $tamper_instance->disabled = FALSE; /* Edit this to true to make a default tamper_instance disabled initially */

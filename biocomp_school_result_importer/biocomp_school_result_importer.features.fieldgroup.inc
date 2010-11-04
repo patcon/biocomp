@@ -3,7 +3,7 @@
 /**
  * Implementation of hook_fieldgroup_default_groups().
  */
-function school_feed_test_fieldgroup_default_groups() {
+function biocomp_school_result_importer_fieldgroup_default_groups() {
   $groups = array();
 
   // Exported group: group_comp_data
