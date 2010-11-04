@@ -34,6 +34,16 @@ function biocomp_school_result_importer_feeds_importer_default() {
           0 => array(
             'source' => '0',
             'target' => 'uid',
+            'unique' => 1,
+          ),
+          1 => array(
+            'source' => '1',
+            'target' => 'score',
+            'unique' => FALSE,
+          ),
+          2 => array(
+            'source' => '6',
+            'target' => 'timestamp',
             'unique' => FALSE,
           ),
         ),

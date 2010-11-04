@@ -39,6 +39,10 @@ function biocomp_school_result_importer_data_default() {
         'size' => 'normal',
         'unsigned' => TRUE,
       ),
+      'score' => array(
+        'type' => 'float',
+        'size' => 'normal',
+      ),
     ),
     'name' => 'feeds_data_results_school',
     'indexes' => array(
@@ -60,8 +64,41 @@ function biocomp_school_result_importer_data_default() {
     'fields' => array(
       'uid' => array(
         'label' => 'School account user ID',
+        'views_field_handler' => 'views_handler_field_numeric',
+        'views_filter_handler' => 'views_handler_filter_numeric',
+        'views_argument_handler' => 'views_handler_argument_numeric',
+        'views_sort_handler' => 'views_handler_sort',
+      ),
+      'score' => array(
+        'label' => 'Average student score',
+        'views_field_handler' => 'views_handler_field_numeric',
+        'views_filter_handler' => 'views_handler_filter_float',
+        'views_argument_handler' => 'views_handler_argument_numeric',
+        'views_sort_handler' => 'views_handler_sort',
+      ),
+      'feed_nid' => array(
+        'views_field_handler' => 'views_handler_field_numeric',
+        'views_filter_handler' => 'views_handler_filter_numeric',
+        'views_argument_handler' => 'views_handler_argument_numeric',
+        'views_sort_handler' => 'views_handler_sort',
+        'label' => '',
+      ),
+      'id' => array(
+        'views_field_handler' => 'views_handler_field_numeric',
+        'views_filter_handler' => 'views_handler_filter_numeric',
+        'views_argument_handler' => 'views_handler_argument_numeric',
+        'views_sort_handler' => 'views_handler_sort',
+        'label' => '',
+      ),
+      'timestamp' => array(
+        'views_field_handler' => 'views_handler_field_date',
+        'views_filter_handler' => 'views_handler_filter_date',
+        'views_argument_handler' => 'views_handler_argument_date',
+        'views_sort_handler' => 'views_handler_sort_date',
+        'label' => '',
       ),
     ),
+    'join' => array(),
   );
 
   $export['feeds_data_results_school'] = $data_table;
