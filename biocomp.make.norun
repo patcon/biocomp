@@ -26,6 +26,8 @@ projects[content_access][version] = "1.2"
 
 projects[content_profile][subdir] = "contrib"
 projects[content_profile][version] = "1.0"
+; Allow for an option to redirect content profile views and edits to user screens.
+projects[content_profile][patch][] = "http://drupal.org/files/issues/content_profile-redirect_option-661572-88.patch"
 
 projects[ctools][subdir] = "contrib"
 projects[ctools][version] = "1.8"
