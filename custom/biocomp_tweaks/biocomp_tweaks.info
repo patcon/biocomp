@@ -1,0 +1,5 @@
+; $Id$
+name = BioComp Tweaks
+description = TODO: Description of module
+package = BioComp
+core = 6.x

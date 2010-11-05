@@ -37,6 +37,8 @@ projects[data][patch][] = "http://drupal.org/files/issues/select_any_core_handle
 
 projects[date][subdir] = "contrib"
 projects[date][version] = "2.6"
+; Allow absolute and relative dates together in date ranges. 
+projects[date][patch][] = "http://drupal.org/files/issues/441970_date_views_year_range_validation.patch"
 
 projects[diff][subdir] = "contrib"
 projects[diff][version] = "2.1"
