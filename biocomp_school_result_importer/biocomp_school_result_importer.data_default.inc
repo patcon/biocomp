@@ -98,7 +98,6 @@ function biocomp_school_result_importer_data_default() {
         'label' => '',
       ),
     ),
-    'join' => array(),
   );
 
   $export['feeds_data_results_school'] = $data_table;
