@@ -43,6 +43,20 @@ function biocomp_school_result_importer_data_default() {
         'type' => 'float',
         'size' => 'normal',
       ),
+      'team_score' => array(
+        'type' => 'float',
+        'size' => 'normal',
+      ),
+      'team_rank' => array(
+        'type' => 'int',
+        'size' => 'normal',
+        'unsigned' => 1,
+      ),
+      'team_ties' => array(
+        'type' => 'int',
+        'size' => 'normal',
+        'unsigned' => 1,
+      ),
     ),
     'name' => 'feeds_data_results_school',
     'indexes' => array(
@@ -81,21 +95,33 @@ function biocomp_school_result_importer_data_default() {
         'views_filter_handler' => 'views_handler_filter_numeric',
         'views_argument_handler' => 'views_handler_argument_numeric',
         'views_sort_handler' => 'views_handler_sort',
-        'label' => '',
+        'label' => 'Competition Data node ID',
       ),
       'id' => array(
         'views_field_handler' => 'views_handler_field_numeric',
         'views_filter_handler' => 'views_handler_filter_numeric',
         'views_argument_handler' => 'views_handler_argument_numeric',
         'views_sort_handler' => 'views_handler_sort',
-        'label' => '',
+        'label' => 'School result ID',
       ),
       'timestamp' => array(
         'views_field_handler' => 'views_handler_field_date',
         'views_filter_handler' => 'views_handler_filter_date',
         'views_argument_handler' => 'views_handler_argument_date',
         'views_sort_handler' => 'views_handler_sort_date',
-        'label' => '',
+        'label' => 'Exam year',
+      ),
+      'team' => array(
+        'label' => 'Team?',
+      ),
+      'team_score' => array(
+        'label' => 'Team score (total)',
+      ),
+      'team_rank' => array(
+        'label' => 'Team rank',
+      ),
+      'team_ties' => array(
+        'label' => 'Teams tied for rank',
       ),
     ),
   );

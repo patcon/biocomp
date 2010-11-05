@@ -39,12 +39,27 @@ function biocomp_school_result_importer_feeds_importer_default() {
           1 => array(
             'source' => '1',
             'target' => 'score',
-            'unique' => FALSE,
+            'unique' => 0,
           ),
           2 => array(
             'source' => '6',
             'target' => 'timestamp',
-            'unique' => FALSE,
+            'unique' => 0,
+          ),
+          3 => array(
+            'source' => '3',
+            'target' => 'team_score',
+            'unique' => 0,
+          ),
+          4 => array(
+            'source' => '4',
+            'target' => 'team_rank',
+            'unique' => 0,
+          ),
+          5 => array(
+            'source' => '5',
+            'target' => 'team_ties',
+            'unique' => 0,
           ),
         ),
         'delete_with_source' => 1,
