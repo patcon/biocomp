@@ -6,6 +6,7 @@ api = "2"
 projects[drupal][version] = "6.19"
 
 ;projects[drush_make][version] = "2.0-beta9"
+; Retrieves version info from d.o for generating makefile
 ;projects[drush_make][patch][] = "http://drupal.org/files/issues/drush_make-894440-14.patch"
 
 ; Modules
@@ -24,7 +25,7 @@ projects[cck][version] = "2.8"
 projects[content_access][subdir] = "contrib"
 projects[content_access][version] = "1.2"
 
-projects[content_profile][subdir] = "contrib"
+projects[content_profile][subdir] = "contrib_modified"
 projects[content_profile][version] = "1.0"
 ; Allow for an option to redirect content profile views and edits to user screens.
 projects[content_profile][patch][] = "http://drupal.org/files/issues/content_profile-redirect_option-661572-88.patch"
@@ -37,7 +38,7 @@ projects[data][version] = "1.0-alpha14"
 ; Allow for any core filter to be selected: http://drupal.org/node/948426
 projects[data][patch][] = "http://drupal.org/files/issues/select_any_core_handler_0.patch"
 
-projects[date][subdir] = "contrib"
+projects[date][subdir] = "contrib_modified"
 projects[date][version] = "2.6"
 ; Allow absolute and relative dates together in date ranges. 
 projects[date][patch][] = "http://drupal.org/files/issues/441970_date_views_year_range_validation.patch"
