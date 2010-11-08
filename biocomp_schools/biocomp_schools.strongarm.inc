@@ -129,8 +129,14 @@ function biocomp_schools_strongarm() {
     'edit_tab' => 'sub',
     'add_link' => 1,
     'registration_use' => 1,
-    'admin_user_create_use' => 1,
+    'admin_user_create_use' => 0,
     'registration_hide' => array(),
+    'values' => array(
+      0 => 2,
+      1 => 5,
+      2 => 3,
+      3 => 4,
+    ),
   );
 
   $export['content_profile_school'] = $strongarm;
