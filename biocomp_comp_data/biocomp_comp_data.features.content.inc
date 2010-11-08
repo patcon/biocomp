@@ -447,7 +447,7 @@ function biocomp_comp_data_content_default_fields() {
     ),
     'timezone_db' => 'UTC',
     'tz_handling' => 'site',
-    'todate' => 'required',
+    'todate' => 'required_timeonly',
     'repeat' => 0,
     'repeat_collapsed' => '',
     'default_format' => 'medium',

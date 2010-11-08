@@ -42,6 +42,8 @@ projects[date][subdir] = "contrib_modified"
 projects[date][version] = "2.6"
 ; Allow absolute and relative dates together in date ranges. 
 projects[date][patch][] = "http://drupal.org/files/issues/441970_date_views_year_range_validation.patch"
+; Allow option to hide TO date but leave TO time field: http://drupal.org/node/127200
+projects[date][patch][] = "http://drupal.org/files/issues/date-6.x-2.6-endtimepatch-5.patch"
 
 projects[diff][subdir] = "contrib"
 projects[diff][version] = "2.1"
