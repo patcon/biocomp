@@ -28,7 +28,7 @@ projects[content_access][version] = "1.2"
 projects[content_profile][subdir] = "contrib_modified"
 projects[content_profile][version] = "1.0"
 ; Allow for an option to redirect content profile views and edits to user screens.
-projects[content_profile][patch][] = "http://drupal.org/files/issues/content_profile-redirect_option-661572-88.patch"
+projects[content_profile][patch][] = "http://drupal.org/files/issues/content_profile-redirect_option-661572-92.patch"
 
 projects[ctools][subdir] = "contrib"
 projects[ctools][version] = "1.8"
@@ -41,9 +41,9 @@ projects[data][patch][] = "http://drupal.org/files/issues/select_any_core_handle
 projects[date][subdir] = "contrib_modified"
 projects[date][version] = "2.6"
 ; Allow absolute and relative dates together in date ranges. 
-projects[date][patch][] = "http://drupal.org/files/issues/441970_date_views_year_range_validation.patch"
+projects[date][patch][] = "http://drupal.org/files/issues/441970-8_date_views_year_range_validation.patch"
 ; Allow option to hide TO date but leave TO time field: http://drupal.org/node/127200
-projects[date][patch][] = "http://drupal.org/files/issues/date-6.x-2.6-endtimepatch-5.patch"
+projects[date][patch][] = "http://drupal.org/files/issues/127200-33_date-end-time.patch"
 
 projects[diff][subdir] = "contrib"
 projects[diff][version] = "2.1"
@@ -54,14 +54,12 @@ projects[features][version] = "1.0"
 projects[feeds][subdir] = "contrib"
 projects[feeds][version] = "1.0-beta10"
 
-projects[feeds_tamper][subdir] = "contrib_modified"
-projects[feeds_tamper][version] = "1.0-alpha3"
-libraries[feeds_tamper_date_plugin][download][type] = "file"
-libraries[feeds_tamper_date_plugin][download][url] = "https://github.com/patcon/feeds_tamper/raw/biocomp-plugins/plugins/convert_date.inc"
-libraries[feeds_tamper_date_plugin][download][destination] = "modules/contrib_modified/feeds_tamper/plugins"
-libraries[feeds_tamper_id_plugin][download][type] = "file"
-libraries[feeds_tamper_id_plugin][download][url] = "https://github.com/patcon/feeds_tamper/raw/biocomp-plugins/plugins/id_from_field.inc"
-libraries[feeds_tamper_id_plugin][download][destination] = "modules/contrib_modified/feeds_tamper/plugins"
+projects[feeds_tamper][subdir] = contrib_modified
+; projects[feeds_tamper][version] = 1.0-alpha3
+projects[feeds_tamper][type] = module
+projects[feeds_tamper][download][type] = git
+projects[feeds_tamper][download][url] = git://github.com/patcon/feeds_tamper.git
+projects[feeds_tamper][download][branch] = biocomp-plugins
 
 projects[filefield][subdir] = "contrib"
 projects[filefield][version] = "3.7"
