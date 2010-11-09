@@ -21,15 +21,5 @@ function biocomp_user_default_roles() {
     'name' => 'authenticated user',
   );
 
-  // Exported role: school
-  $roles['school'] = array(
-    'name' => 'school',
-  );
-
-  // Exported role: student
-  $roles['student'] = array(
-    'name' => 'student',
-  );
-
   return $roles;
 }
