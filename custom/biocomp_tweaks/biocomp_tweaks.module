@@ -37,11 +37,52 @@ function biocomp_tweaks_date_api_fields($field) {
     // loaded automatically in the Views SQL.
     'related_fields' => array(),
     // Granularity of this date field's db data.
-    'granularity' => array('year', 'month', 'day', 'hour', 'minute', 'second'),
+    'granularity' => array('year'),
   );
 
   switch ($field) {
     case 'feeds_data_results_school.timestamp':
     return $values;
+  }
+}
+
+/**
+ * Invoked after a feed source has been parsed, before it will be processed.
+ * 
+ * @param $importer
+ *   FeedsImporter object that has been used for importing the feed.
+ * @param $source
+ *  FeedsSource object that describes the source that has been imported.
+ */
+function biocomp_tweaks_feeds_after_parse(FeedsImporter $importer, FeedsSource $source) {
+  switch ($importer->id) {
+    case 'results_school':
+
+      // Build an array of all school account usernames (school codes) keyed to account uid.
+      $sql = "SELECT users.name, users.uid FROM {users} INNER JOIN {users_roles} ON users.uid = users_roles.uid WHERE users_roles.rid = 3";
+      $result = db_query($sql);
+      while ($user = db_fetch_object($result)) {
+        $all_users[$user->uid] = $user->name;
+      }
+
+      foreach ($source->batch->items as $n => $import_row) {
+
+        // ##### Convert year YYYY to UNIX time. (arbitrarily May YYYY) #####
+        $source->batch->items[$n][6] = strtotime('May ' . $import_row[6]);
+
+        // ##### Convert school code to uid #####
+        $uid = array_search($import_row[0], $all_users);
+        // Unset row and print message if no school code match.
+        if (!$uid) {
+          $text = 'The result row for school code %school_code in the imported file does not correspond to a school account in the system.';
+          $text .= ' Please be sure that a school account exists with this school code as a username.';
+          $msg = t($text, array('%school_code' => $import_row[0]));
+          drupal_set_message($msg, 'error');
+          unset($source->batch->items[$n]);
+        } else {
+          $source->batch->items[$n][0] = $uid;
+        }
+      }
+      break;
   }
 }

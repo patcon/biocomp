@@ -11,32 +11,30 @@ function biocomp_strongarm() {
   $strongarm->name = 'content_access_settings';
   $strongarm->value = array(
     'view' => array(
-      'school' => array(
-        0 => 1,
-        1 => 2,
-      ),
       'competition' => array(
         0 => 1,
         1 => 2,
+      ),
+      'school' => array(
+        0 => 5,
       ),
     ),
     'view_own' => array(
-      'school' => array(
-        0 => 1,
-        1 => 2,
-      ),
       'competition' => array(
         0 => 1,
         1 => 2,
       ),
+      'school' => array(
+        0 => 2,
+      ),
     ),
     'per_node' => array(
-      'school' => 0,
       'competition' => 0,
+      'school' => 0,
     ),
     'priority' => array(
-      'school' => '0',
       'competition' => '0',
+      'school' => '0',
     ),
   );
 

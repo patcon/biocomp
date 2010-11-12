@@ -124,13 +124,6 @@ function biocomp_school_result_importer_data_default() {
         'label' => 'Teams tied for rank',
       ),
     ),
-    'join' => array(
-      'users' => array(
-        'left_field' => 'uid',
-        'field' => 'uid',
-        'inner_join' => '0',
-      ),
-    ),
   );
 
   $export['feeds_data_results_school'] = $data_table;
