@@ -87,8 +87,25 @@ projects[strongarm][version] = "2.0"
 projects[token][subdir] = "contrib"
 projects[token][version] = "1.15"
 
+projects[ubercart][subdir] = contrib
+projects[ubercart][version] = 2.4
+
+projects[uc_views][subdir] = contrib
+projects[uc_views][version] = 3.0
+
 projects[views][subdir] = "contrib"
 projects[views][version] = "2.11"
+
+projects[views_bonus][subdir] = contrib_modified
+projects[views_bonus][version] = 1.1
+projects[views_bonus][patch][] = http://drupal.org/files/issues/898682-02_allow-tab-delimited-files-6.x-1.1.patch
+
+projects[views_customfield][subdir] = contrib
+projects[views_customfield][version] = 1.0 
+
+projects[views_groupby][subdir] = contrib_modified
+projects[views_groupby][version] = 1.0-rc2
+projects[views_groupby][patch][] = http://drupal.org/files/issues/views_groupby_669070-20-6.x-1.x-rc2-p0.patch
 
 projects[vertical_tabs][subdir] = "contrib"
 projects[vertical_tabs][version] = "1.0-rc1"

@@ -1,0 +1,3 @@
+<?php
+
+include_once('biocomp_export_registration.features.inc');
