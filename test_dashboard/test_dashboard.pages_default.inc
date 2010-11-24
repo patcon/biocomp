@@ -27,6 +27,8 @@ function test_dashboard_default_page_manager_pages() {
       ),
     ),
     'logic' => 'and',
+    'type' => 'none',
+    'settings' => NULL,
   );
   $page->menu = array();
   $page->arguments = array(
@@ -88,9 +90,6 @@ function test_dashboard_default_page_manager_pages() {
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
-      'default' => array(
-        'corner_location' => 'pane',
-      ),
       'top' => NULL,
       'left_above' => NULL,
       'right_above' => NULL,
@@ -100,6 +99,9 @@ function test_dashboard_default_page_manager_pages() {
       'bottom' => NULL,
       'left' => NULL,
       'right' => NULL,
+      'default' => array(
+        'corner_location' => 'pane',
+      ),
     ),
     'style' => 'rounded_corners',
     'right' => array(

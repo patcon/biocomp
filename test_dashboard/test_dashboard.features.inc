@@ -26,7 +26,7 @@ $flags[] = array (
   'global' => '0',
   'types' => 
   array (
-    0 => 'page',
+    0 => 'announcement',
   ),
   'flag_short' => 'Hide',
   'flag_long' => 'Hide this announcement.',
@@ -34,17 +34,16 @@ $flags[] = array (
   'unflag_short' => 'Show',
   'unflag_long' => 'Show this announcement',
   'unflag_message' => '',
-  'unflag_denied_text' => '',
+  'unflag_denied_text' => 'Hidden',
   'link_type' => 'toggle',
   'roles' => 
   array (
     'flag' => 
     array (
-      0 => '2',
+      0 => 3,
     ),
     'unflag' => 
     array (
-      0 => '2',
     ),
   ),
   'show_on_page' => 0,
@@ -52,8 +51,7 @@ $flags[] = array (
   'show_on_form' => 0,
   'access_author' => '',
   'i18n' => 0,
-  'flag_confirmation' => '',
-  'unflag_confirmation' => '',
+  'module' => 'test_dashboard',
   'api_version' => 2,
 );
 return $flags;
@@ -64,10 +62,10 @@ return $flags;
  */
 function test_dashboard_node_info() {
   $items = array(
-    'page' => array(
-      'name' => t('Page'),
+    'announcement' => array(
+      'name' => t('Announcement'),
       'module' => 'features',
-      'description' => t('A <em>page</em>, similar in form to a <em>story</em>, is a simple method for creating and displaying information that rarely changes, such as an "About us" section of a website. By default, a <em>page</em> entry does not allow visitor comments and is not featured on the site\'s initial home page.'),
+      'description' => '',
       'has_title' => '1',
       'title_label' => t('Title'),
       'has_body' => '1',
