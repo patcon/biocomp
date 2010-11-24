@@ -1,0 +1,3 @@
+<?php
+
+include_once('test_dashboard.features.inc');
