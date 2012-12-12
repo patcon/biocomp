@@ -84,5 +84,37 @@ function biocomp_tweaks_feeds_after_parse(FeedsImporter $importer, FeedsSource $
         }
       }
       break;
+
+    case 'importer_schools':
+
+      break;
+
+    case 'importer_schools_profiles':
+
+      // Build an array of all school account usernames (school codes) keyed to account uid.
+      $sql = "SELECT users.name, users.uid FROM {users} INNER JOIN {users_roles} ON users.uid = users_roles.uid WHERE users_roles.rid = 3";
+      $result = db_query($sql);
+      while ($user = db_fetch_object($result)) {
+        $all_users[$user->uid] = $user->name;
+      }
+
+      foreach ($source->batch->items as $n => $import_row) {
+
+        // ##### Convert school code to uid #####
+        $uid = array_search($import_row[0], $all_users);
+        // Unset row and print message if no school code match.
+        if (!$uid) {
+          $text = 'The result row for school code %school_code in the imported file does not correspond to a school account in the system.';
+          $text .= ' Please be sure that a school account exists with this school code as a username.';
+          $msg = t($text, array('%school_code' => $import_row[0]));
+          drupal_set_message($msg, 'error');
+          unset($source->batch->items[$n]);
+        } else {
+          $source->batch->items[$n][0] = $uid;
+        }
+      }
+      break;
+
+
   }
 }

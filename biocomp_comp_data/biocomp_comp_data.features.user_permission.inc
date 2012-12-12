@@ -10,7 +10,7 @@ function biocomp_comp_data_user_default_permissions() {
   $permissions['create competition content'] = array(
     'name' => 'create competition content',
     'roles' => array(
-      '0' => 'admin',
+      '0' => 'administrator',
     ),
   );
 
@@ -18,7 +18,7 @@ function biocomp_comp_data_user_default_permissions() {
   $permissions['delete any competition content'] = array(
     'name' => 'delete any competition content',
     'roles' => array(
-      '0' => 'admin',
+      '0' => 'administrator',
     ),
   );
 
@@ -26,7 +26,7 @@ function biocomp_comp_data_user_default_permissions() {
   $permissions['edit any competition content'] = array(
     'name' => 'edit any competition content',
     'roles' => array(
-      '0' => 'admin',
+      '0' => 'administrator',
     ),
   );
 
